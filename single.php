@@ -137,7 +137,7 @@
 							<h4>Articole recomandate</h4>
 						</ol>
 						<?php
-						$args = array('posts_per_page' => 6, 'category' => 51, 'orderby' => 'rand', 'order'    => 'ASC');
+						$args = array('posts_per_page' => 6, 'category' => 30, 'orderby' => 'rand', 'order'    => 'ASC');
 						$myposts = get_posts($args);
 						foreach ($myposts as $post) : setup_postdata($post); ?>
 							<li class="related-large">
