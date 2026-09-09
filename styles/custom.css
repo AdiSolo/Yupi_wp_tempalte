@@ -376,13 +376,17 @@ img {
     padding: 0 15px 20px;
   }
 
-  /* single-sidebar.php hardcodes height:400px inline for its "most viewed" widget,
-     sized for many list items - with only a few (or one) it leaves a large empty gap. */
+  /* single-sidebar.php's own JS sets an inline style="height: <window height minus 100>px"
+     on .contentHolder on every load/resize (a "fill remaining viewport" pattern meant for a
+     sticky desktop sidebar) - inline styles beat any stylesheet rule regardless of specificity,
+     so !important is the only way to override it here. On a typical phone this inline height is
+     even taller than the 400px hardcoded in the file's own <style> block, making the empty gap
+     under a short list worse, not better. Desktop is unaffected since this is mobile-only. */
   #sidebar .contentHolder {
-    width: 100%;
+    width: 100% !important;
     max-width: 325px;
-    height: auto;
-    max-height: 400px;
+    height: auto !important;
+    max-height: 400px !important;
     margin: 0 auto;
   }
 
