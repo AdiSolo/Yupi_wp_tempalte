@@ -93,28 +93,52 @@ img {
   }
 
   #head_search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
     width: 100%;
-    max-width: 320px;
     margin: 0 0 8px;
     text-align: center;
     order: 3;
   }
 
+  #head_search .search_form {
+    display: flex;
+    flex: 1 1 auto;
+    max-width: 230px;
+  }
+
   #head_search input#sli_search_1 {
-    width: 62%;
+    flex: 1 1 auto;
+    width: auto;
+    min-width: 0;
     box-sizing: border-box;
+  }
+
+  #head_search #searchImage {
+    flex: 0 0 70px;
   }
 
   #head_nav {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
+    column-gap: 12px;
+    row-gap: 4px;
     width: 100%;
     margin: 0 0 8px;
+    padding: 6px 0;
+    border-top: solid 1px #eee;
+    border-bottom: solid 1px #eee;
     order: 4;
   }
 
   #head_nav li {
+    float: none;
     padding-left: 0;
   }
 
@@ -123,15 +147,15 @@ img {
     display: flex;
     align-items: center;
     gap: 8px;
+    flex: 0 0 auto;
     margin: 0;
-    padding: 9px 18px;
+    padding: 9px 16px;
     background: #e3170d;
     color: #fff;
     border: none;
     border-radius: 3px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 13px;
-    order: 5;
   }
 
   #mobile_menu_toggle .hamburger_icon {
@@ -244,7 +268,17 @@ img {
 
   ul.post-meta {
     padding: 0 15px;
+    margin-left: 0;
     box-sizing: border-box;
+    overflow: hidden;
+  }
+
+  .post-meta .single_author_name {
+    margin-right: 10px;
+  }
+
+  .post-meta .time-meta {
+    margin-left: 16px;
   }
 
   .next-pre-posts {

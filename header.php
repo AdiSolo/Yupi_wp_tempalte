@@ -150,12 +150,12 @@
 						</script>
 						<input value="" id="searchImage" type="submit" name="search" class="search-button">
 					</form>
-				</div>
 
-				<button type="button" id="mobile_menu_toggle" aria-controls="head_menu" aria-expanded="false">
-					<span class="hamburger_icon"><span></span><span></span><span></span></span>
-					<span class="hamburger_label">Meniu</span>
-				</button>
+					<button type="button" id="mobile_menu_toggle" aria-controls="head_menu" aria-expanded="false">
+						<span class="hamburger_icon"><span></span><span></span><span></span></span>
+						<span class="hamburger_label">Meniu</span>
+					</button>
+				</div>
 
 				<ul id="head_menu">
 					<li class="head_menu_yupi"><a href="https://yupi.md">Yupi</a> </li>
