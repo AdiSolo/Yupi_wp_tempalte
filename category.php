@@ -5,7 +5,7 @@
             	<?php if (have_posts()) : ?>
 <?php while ( have_posts() ) : the_post(); ?>
             <div id="post-<?php the_ID(); ?>" <?php post_class(); ?> style="float:left; width:330px; height:210px; margin:0 8px;">
-            <a href="<?php the_permalink(); ?>" class="post-thumbnail"> <?php the_post_thumbnail(array('size' => 330,330), array('title' => '')); ?></a>
+            <a href="<?php the_permalink(); ?>" class="post-thumbnail"> <?php yupi_post_thumbnail(array(330, 330), array('title' => '')); ?></a>
 
 <div class="clear"></div>
 </div>
@@ -28,7 +28,7 @@
            
         
 			<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-<a href="<?php the_permalink(); ?>" class="post-thumbnail"> <?php the_post_thumbnail(array('size' => 300,300), array('title' => '')); ?></a>
+<a href="<?php the_permalink(); ?>" class="post-thumbnail"> <?php yupi_post_thumbnail(array(300, 300), array('title' => '')); ?></a>
 <h1 class="title"><a href="<?php the_permalink(); ?>"  rel="bookmark"><?php the_title(); ?></a> </h1>
 <div class="post_meta">
 

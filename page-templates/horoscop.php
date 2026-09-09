@@ -15,7 +15,7 @@ define('DONOTCACHEPAGE', true);
 
 <div class="horoscope-content">
 <?php $zodii= array("Berbec","Taur","Gemeni","Rac","Leu","Fecioara","Balanta","Scorpion","Sagetator","Capricorn","Varsator","Pesti");?>
-<h3>Horoscopul de astăzi – <?php echo strftime("%e %B %Y"); ?></h3>
+<h3>Horoscopul de astăzi – <?php echo yupi_date_ro(); ?></h3>
 <ul class="other-horoscope" id="horoscope-index-ul">
 <?php for($i=0;$i<12;$i++) { ?>
 	<li><a href="https://www.yupi.md/horoscop/<?php echo $zodii[$i] ?>" style="background: url(<?php bloginfo('template_url'); ?>/img/horoscope/<?php echo $zodii[$i]?>1.png)"></a><p><?php echo $zodii[$i]?></p></li>
@@ -44,25 +44,7 @@ $date= array(
  ?>
 <h2><?php echo $page_title;?> ( <?php echo $date[$page_title]; ?>)</h2>
 <p class="img"><img src="<?php bloginfo('template_url'); ?>/img/horoscope/<?php echo $page_title;?>.jpg" width="400" height="250" /></p>
-<h3>Horoscopul de astăzi – <?php echo strftime("%e %B %Y"); ?></h3>
-<?php
-include_once 'simple_html_dom.php';
-$page_title = strtolower($page_title);
-$url = "http://www.acvaria.com/partener-acvaria.php?z=".$page_title."";
-$html = file_get_html($url);
-
-$count=0;
-
-
-    $text= $html;
-	
-
-?>
-<p style="margin-bottom:10px" class="horoscop-text">
-<?php echo $text;?>
-</p>
-
-<h6>Sursa: <a href="http://www.acvaria.com" target="_blank">www.avaria.com</a></h6>
+<h3>Horoscopul de astăzi – <?php echo yupi_date_ro(); ?></h3>
 </div>
 <?php $zodii= array("Berbec","Taur","Gemeni","Rac","Leu","Fecioara","Balanta","Scorpion","Sagetator","Capricorn","Varsator","Pesti");?>
 <ul class="other-horoscope">

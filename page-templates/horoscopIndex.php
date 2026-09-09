@@ -12,7 +12,7 @@ Template Name: Horoscopesa - Index
 
 <div class="horoscope-content">
 <?php $zodii= array("Berbec","Taur","Gemeni","Rac","Leu","Fecioara","Balanta","Scorpion","Sagetator","Capricorn","Varsator","Pesti");?>
-<h3>Horoscopul de astazi – <?php echo strftime("%e %B %Y"); ?></h3>
+<h3>Horoscopul de astazi – <?php echo yupi_date_ro(); ?></h3>
 <ul class="other-horoscope" id="horoscope-index-ul">
 <?php for($i=0;$i<12;$i++) { ?>
 	<li><a href="https://www.yupi.md/horoscop/<?php echo $zodii[$i] ?>" style="background: url(<?php bloginfo('template_url'); ?>/img/horoscope/<?php echo $zodii[$i]?>1.png)"></a><p><?php echo $zodii[$i]?></p></li>

@@ -6,7 +6,7 @@ $myposts = get_posts( $args );
 $count =0;
 foreach( $myposts as $post ) :	setup_postdata($post); ?>
 <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-<a href="<?php the_permalink(); ?>"> <?php the_post_thumbnail(array('size' => 560,600), array('title' => '')); ?></a>
+<a href="<?php the_permalink(); ?>"> <?php yupi_post_thumbnail(array(560, 600), array('title' => '')); ?></a>
 <h1 class="title"><a href="<?php the_permalink(); ?>"  rel="bookmark"><?php the_title(); ?> </a> </h1>
 <div class="description"><?php the_excerpt(); ?> </div>
 <div class="post_meta">

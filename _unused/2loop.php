@@ -11,7 +11,7 @@ $myposts = get_posts( $args );
 foreach( $myposts as $post ) :	setup_postdata($post); ?>
 
 <div id="post-<?php the_ID(); ?>" class="post">
-<a href="<?php the_permalink(); ?>"> <?php the_post_thumbnail(array('size' => 560,600), array('title' => '')); ?></a>
+<a href="<?php the_permalink(); ?>"> <?php yupi_post_thumbnail(array(560, 600), array('title' => '')); ?></a>
 <h1 class="title"><a href="<?php the_permalink(); ?>"  rel="bookmark"><?php the_title(); ?> </a> </h1>
 <div class="description"><?php the_excerpt(); ?> </div>
 <div class="post_meta">
@@ -38,7 +38,7 @@ $count =0;
 foreach( $myposts as $post ) :	setup_postdata($post); ?>
 
 <div id="post-<?php the_ID(); ?>"  class="post">
-<a href="<?php the_permalink(); ?>" title="">  <?php the_post_thumbnail(array('size' => 300,300), array('title' => '')); ?></a>
+<a href="<?php the_permalink(); ?>" title="">  <?php yupi_post_thumbnail(array(300, 300), array('title' => '')); ?></a>
 <h1 class="title"><a href="<?php the_permalink(); ?>"  rel="bookmark"><?php the_title(); ?></a> </h1>
 <div class="post_meta"><?php /* edit_post_link(); */?><?php /* if ( is_user_logged_in() ) { echo getPostViews(get_the_ID()); }; */?>
 <span><?php echo human_time_diff( get_the_time('U'), current_time('timestamp') ) . ' în urmă '; ?>

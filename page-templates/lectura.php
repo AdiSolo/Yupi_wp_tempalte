@@ -1,30 +1,31 @@
 <?php get_header();
 /*
-	Template Name: Filme
+	Template Name: Lectura
 */	
 	
 get_header();
 $pageNumber = (get_query_var('paged')) ? get_query_var('paged') : 1;
-$cat_id = 41;
-$top_cat_id = 42;
+$cat_id = 39;
+$top_cat_id = 40;
 ?>
 
 
-   <div id="content">
-	<!--	<div class="under_head_ad under_head_ad_single">
+    <div id="content">
+		<!--<div class="under_head_ad under_head_ad_single">
 			<div style="margin-left:150px;">
-		Under_head 
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+		<!-- Under_head 
+<script type="text/javascript">
+    google_ad_client = "ca-pub-9984908628803867";
+    google_ad_slot = "6543631837";
+    google_ad_width = 728;
+    google_ad_height = 90;
+</script>
 <!-- Publicitate 
-<ins class="adsbygoogle"
-     style="display:inline-block;width:728px;height:90px"
-     data-ad-client="ca-pub-9984908628803867"
-     data-ad-slot="6543631837"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
+<script type="text/javascript"
+src="//pagead2.googlesyndication.com/pagead/show_ads.js">
 </script>
 </div>
-	</div> -->
+	</div>-->
 	<div class="left_index_content" style="padding-top:20px;">
 	
 <?php
@@ -49,7 +50,7 @@ if($count==1 || $count==5 || $count==13 || $count==18) {
 		<div id="post-<?php echo $post_top->ID; ?>" class="post post-big" >
 	<a href="<?php echo get_permalink( $post_top->ID ); ?>">
 		
-			<?php echo get_the_post_thumbnail($post_top->ID, 'big-thumb' ); ?> 
+			<?php echo yupi_get_the_post_thumbnail($post_top->ID, 'big-thumb' ); ?> 
 	</a>
 	
 	<h1 class="title">
@@ -69,9 +70,9 @@ if($count==1 || $count==5 || $count==13 || $count==18) {
 <div id="post-<?php the_ID(); ?>" class="post <?php echo $class; ?>" >
 	<a href="<?php the_permalink(); ?>">
 		<?php if($class == 'post-big') {
-			the_post_thumbnail('big-thumb'); 
+			yupi_post_thumbnail('big-thumb'); 
 		} else  {
-			the_post_thumbnail('small-thumb'); 
+			yupi_post_thumbnail('small-thumb'); 
 		}
 		?>
 	</a>
@@ -95,7 +96,7 @@ if( empty( $myposts ) )
      echo "Ne pare rău, nu mai avem articole pentru aceasta categorie";
 } else if($count==16) {
 ?>
-         <a href="https://yupi.md/filme/page/<?php echo $pageNumber+1;?>" class="index_more_posts">Mai multe articole >></a>
+         <a href="https://yupi.md/lectura/page/<?php echo $pageNumber+1;?>" class="index_more_posts">Mai multe articole >></a>
 <?php } ?>
 	  </div>
       

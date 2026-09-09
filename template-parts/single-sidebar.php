@@ -91,7 +91,7 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1398978669235-0');
 							<li>
 								<a href="<?php the_permalink(); ?>">
 									<div class="img_box">
-										<?php the_post_thumbnail('side-thumb'); ?>
+										<?php yupi_post_thumbnail('side-thumb'); ?>
 									</div>
 									<h6><?php the_title(); ?></h6>
 								</a>

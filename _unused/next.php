@@ -8,7 +8,7 @@ foreach( $myposts as $post ) :	setup_postdata($post); ?>
  <span class="close"></span>
     <a href="<?php the_permalink(); ?>">
     <div class="next-post-thumb">
-   <?php the_post_thumbnail(array('size' => 120,120), array('title' => ''));?>
+   <?php yupi_post_thumbnail(array(120, 120), array('title' => ''));?>
     </div>
     <p><?php the_title(); ?>
     </a>

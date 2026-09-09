@@ -106,7 +106,7 @@ shuffle($myposts);
 	<div class="widget-top">
 		<a href="http://Yupi.md/<?php echo $myposts[0]->post_name ?>?utm_campaign=<?php echo $myposts[0]->post_title?>&utm_source=Sport1&utm_medium=Top" target="_blank"  >
 		<div class="widget-image">
-		<?php echo get_the_post_thumbnail($myposts[0]->ID,array(300,300)); ?>
+		<?php echo yupi_get_the_post_thumbnail($myposts[0]->ID,array(300,300)); ?>
 		<h1><?php echo $myposts[0]->post_title ?></h1></a>
 		</div>
 		
@@ -120,7 +120,7 @@ shuffle($myposts);
 			
 			<?php for($i=1;$i<11;$i++){?>
 					<li class="slide_1"><a href="http://Yupi.md/<?php echo $myposts[$i]->post_name ?>?utm_campaign=<?php echo $myposts[0]->post_title?>&utm_source=Sport1&utm_medium=Bottom" target="_blank">
-					<?php echo get_the_post_thumbnail($myposts[$i]->ID,array(80,80)); ?>
+					<?php echo yupi_get_the_post_thumbnail($myposts[$i]->ID,array(80,80)); ?>
 					<h3><?php echo $myposts[$i]->post_title ?></h3>
 					</a><li>
 					<?php } ?>

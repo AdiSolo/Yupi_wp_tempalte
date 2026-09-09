@@ -1,7 +1,16 @@
 <?php
 
-
-
+function yupi_date_ro( $timestamp = null ) {
+	if ( $timestamp === null ) {
+		$timestamp = current_time( 'timestamp' );
+	}
+	$luni_ro = array(
+		1 => 'ianuarie', 2 => 'februarie', 3 => 'martie', 4 => 'aprilie',
+		5 => 'mai', 6 => 'iunie', 7 => 'iulie', 8 => 'august',
+		9 => 'septembrie', 10 => 'octombrie', 11 => 'noiembrie', 12 => 'decembrie',
+	);
+	return date( 'j', $timestamp ) . ' ' . $luni_ro[ (int) date( 'n', $timestamp ) ] . ' ' . date( 'Y', $timestamp );
+}
 
 if( class_exists( 'kdMultipleFeaturedImages' ) ) {
 
@@ -33,6 +42,25 @@ add_image_size( 'intro-image', 730, 300,true );
 add_image_size( 'small-thumb', 335, 200,true );
 add_image_size( 'big-thumb',   700, 300,true );
 add_image_size( 'side-thumb',   70, 50,true );
+
+function yupi_placeholder_image_url() {
+	return get_template_directory_uri() . '/img/no-image-placeholder.png';
+}
+
+function yupi_post_thumbnail( $size = 'post-thumbnail', $attr = '' ) {
+	if ( has_post_thumbnail() ) {
+		the_post_thumbnail( $size, $attr );
+		return;
+	}
+	echo '<img src="' . esc_url( yupi_placeholder_image_url() ) . '" class="attachment-' . esc_attr( is_array( $size ) ? implode( 'x', $size ) : $size ) . ' wp-post-image placeholder-image" alt="" />';
+}
+
+function yupi_get_the_post_thumbnail( $post_id = null, $size = 'post-thumbnail', $attr = '' ) {
+	if ( has_post_thumbnail( $post_id ) ) {
+		return get_the_post_thumbnail( $post_id, $size, $attr );
+	}
+	return '<img src="' . esc_url( yupi_placeholder_image_url() ) . '" class="wp-post-image placeholder-image" alt="" />';
+}
 
 
 function extra_contact_info($contactmethods) {

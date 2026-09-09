@@ -19,7 +19,7 @@ $myposts = get_posts( $args );
 foreach( $myposts as $post ) :	setup_postdata($post); ?>
 
 <div class="post">
-<a href="<?php the_permalink(); ?>"><div style="height:150px; overflow:hidden"> <?php the_post_thumbnail(array('size' => 300,300), array('title' => '')); ?></div></a>
+<a href="<?php the_permalink(); ?>"><div style="height:150px; overflow:hidden"> <?php yupi_post_thumbnail(array(300, 300), array('title' => '')); ?></div></a>
 <h1 class="title"><a href="<?php the_permalink(); ?>"  rel="bookmark"><?php the_title(); ?> </a> </h1>
 <div class="post_meta">
 <?php echo human_time_diff( get_the_time('U'), current_time('timestamp') ) . ' în urmă '; ?></div>
@@ -33,7 +33,7 @@ $args = array( 'numberposts' => 9, 'offset'=> 0, 'category' => "31" , 'orderby' 
 $myposts = get_posts( $args );
 foreach( $myposts as $post ) :	setup_postdata($post); ?>
 <div class="post">
-<a href="<?php the_permalink(); ?>"> <?php the_post_thumbnail(array('size' => 255,255), array('title' => '')); ?></a>
+<a href="<?php the_permalink(); ?>"> <?php yupi_post_thumbnail(array(255, 255), array('title' => '')); ?></a>
 <h1 class="title"><a href="<?php the_permalink(); ?>"  rel="bookmark"><?php the_title(); ?> </a> </h1>
 </div>
 <?php endforeach; ?>

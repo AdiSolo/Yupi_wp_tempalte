@@ -54,7 +54,7 @@
 				if (class_exists('kdMultipleFeaturedImages')) {
 					kd_mfi_the_featured_image('featured-image-2', 'post', 'intro-image');
 				}
-				echo get_the_post_thumbnail(get_the_ID(), 'full');
+				echo yupi_get_the_post_thumbnail(get_the_ID(), 'full');
 
 				?>
 			</div>
@@ -143,7 +143,7 @@
 							<li class="related-large">
 								<a href="<?php the_permalink() ?>">
 									<div class="img_box">
-										<?php the_post_thumbnail(array(300, 200), array('title' => '')); ?>
+										<?php yupi_post_thumbnail(array(300, 200), array('title' => '')); ?>
 									</div>
 									<h3><?php the_title(); ?></h3>
 								</a>
@@ -210,7 +210,7 @@
 			</div>
 	</div>
 
-	<?php locate_template(array('single-sidebar.php'), true) ?>
+	<?php locate_template(array('template-parts/single-sidebar.php'), true) ?>
 </div>
 
 <style>

@@ -1,12 +1,11 @@
-<?php get_header();
+<?php
 /*
-	Template Name: Oameni
+Template Name: Urban
 */
-
 get_header();
 $pageNumber = (get_query_var('paged')) ? get_query_var('paged') : 1;
-$cat_id = 45;
-$top_cat_id = 46;
+$cat_id = 37;
+$top_cat_id = 38;
 ?>
 
 
@@ -51,7 +50,7 @@ if($count==1 || $count==5 || $count==13 || $count==18) {
 		<div id="post-<?php echo $post_top->ID; ?>" class="post post-big" >
 	<a href="<?php echo get_permalink( $post_top->ID ); ?>">
 		
-			<?php echo get_the_post_thumbnail($post_top->ID, 'big-thumb' ); ?> 
+			<?php echo yupi_get_the_post_thumbnail($post_top->ID, 'big-thumb' ); ?> 
 	</a>
 	
 	<h1 class="title">
@@ -71,9 +70,9 @@ if($count==1 || $count==5 || $count==13 || $count==18) {
 <div id="post-<?php the_ID(); ?>" class="post <?php echo $class; ?>" >
 	<a href="<?php the_permalink(); ?>">
 		<?php if($class == 'post-big') {
-			the_post_thumbnail('big-thumb'); 
+			yupi_post_thumbnail('big-thumb'); 
 		} else  {
-			the_post_thumbnail('small-thumb'); 
+			yupi_post_thumbnail('small-thumb'); 
 		}
 		?>
 	</a>
@@ -97,7 +96,7 @@ if( empty( $myposts ) )
      echo "Ne pare rău, nu mai avem articole pentru aceasta categorie";
 } else if($count==16) {
 ?>
-         <a href="https://yupi.md/foto/page/<?php echo $pageNumber+1;?>" class="index_more_posts">Mai multe articole >></a>
+         <a href="https://yupi.md/urban/page/<?php echo $pageNumber+1;?>" class="index_more_posts">Mai multe articole >></a>
 <?php } ?>
 	  </div>
       

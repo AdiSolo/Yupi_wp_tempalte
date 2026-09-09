@@ -32,7 +32,7 @@ if($count==1 || $count==5 || $count==13 || $count==18) {
 		<div id="post-<?php echo $post_top->ID; ?>" class="post post-big" >
 	<a href="<?php echo get_permalink( $post_top->ID ); ?>">
 		
-			<?php echo get_the_post_thumbnail($post_top->ID, 'big-thumb' ); ?> 
+			<?php echo yupi_get_the_post_thumbnail($post_top->ID, 'big-thumb' ); ?> 
 	</a>
 	
 	<h1 class="title">
@@ -52,9 +52,9 @@ if($count==1 || $count==5 || $count==13 || $count==18) {
 <div id="post-<?php the_ID(); ?>" class="post <?php echo $class; ?>" >
 	<a href="<?php the_permalink(); ?>">
 		<?php if($class == 'post-big') {
-		 the_post_thumbnail(array(300, 200), array('title' => ''));
+		 yupi_post_thumbnail(array(300, 200), array('title' => ''));
 		} else  {
-			the_post_thumbnail(array(300, 200), array('title' => ''));
+			yupi_post_thumbnail(array(300, 200), array('title' => ''));
 
 		}
 		?>
