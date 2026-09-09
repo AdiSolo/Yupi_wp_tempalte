@@ -58,46 +58,76 @@ img {
 }
 
 /* -----------------------------------------------------------------------------------------------
-   Step 2: header nav row + post images were overflowing past the right edge on narrow screens
-   (nav text cut off, big post image clipped). Fixing just that, still without touching the
-   float/width of .wrapp / #all_content / #content / #sidebar / .left_index_content themselves.
+   Step 2 (rebuilt with flexbox): header nav row + post images were overflowing past the right
+   edge on narrow screens. Flex containers force their children out of float entirely (the CSS
+   spec computes float/clear on a flex item to 'none' automatically), which is a much more
+   predictable way to get a vertical stack than overriding float/width/display one by one on
+   elements that were designed around floating. Still not touching .wrapp / #all_content /
+   #content / #sidebar / .left_index_content.
    ----------------------------------------------------------------------------------------------- */
 @media screen and (max-width: 768px) {
+  #header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
   .head_meteo,
   .head_like,
   .logo_cont,
-  #head_nav,
   #head_search {
-    float: none;
     width: auto;
-    margin: 10px auto;
+    margin: 8px 0;
     text-align: center;
   }
 
   #logo {
-    float: none;
-    margin: 0 auto;
+    margin: 0;
+  }
+
+  #head_nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 8px 0;
   }
 
   #head_nav li {
-    float: none;
-    display: inline-block;
+    padding-left: 0;
+  }
+
+  #head_menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
   }
 
   #head_menu li {
-    float: none;
     width: 100%;
     text-align: center;
-    box-sizing: border-box;
   }
 
   #head_menu li a {
-    float: none;
     display: block;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  #head_menu li span {
+    display: none;
   }
 
   li.head_menu_random {
     display: none;
+  }
+
+  .left_index_content {
+    display: flex;
+    flex-direction: column;
+    float: none;
+    width: 100%;
   }
 
   .post,
