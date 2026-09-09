@@ -396,6 +396,23 @@ img {
     padding: 0 15px;
   }
 
+  /* The zodiac widget's fixed height:250px (style.css) only fits 3 of its 4 rows of
+     items (the 4th - Capricorn/Varsator/Pesti - renders below the box since overflow
+     is visible by default, but then gets visually covered by the sidebar content that
+     follows, since the box's own 250px height is what the next sibling flows after).
+     height:auto + a clearfix lets it grow to fit all 4 rows; background-repeat:no-repeat
+     stops the 300x250 sprite from tiling to fill the taller box. Note: the sprite image
+     is a 4-per-row grid, but these items only fit 3-per-row at their current width/margins,
+     so icon-to-label alignment is already slightly off past the first couple of items -
+     a separate, pre-existing issue left alone here since fixing it needs pixel-precise
+     rework of either the sprite or the item grid, not a quick safe change. */
+  .horoscope {
+    height: auto;
+    min-height: 250px;
+    overflow: hidden;
+    background-repeat: no-repeat;
+  }
+
   /* ---------- sidebar ---------- */
   #sidebar,
   .single-sidebar {
