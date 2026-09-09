@@ -21,7 +21,7 @@
 		<meta property="og:type" content="article" />
 		<?php
 		$src = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), array(200, 200), false, '');
-		$og_image = $src ? $src[0] : 'https://www.yupi.md/wp-content/themes/yupi_theme/img/logo.png';
+		$og_image = $src ? $src[0] : 'https://www.yupi.md/wp-content/themes/yupi_wp_new_2026/img/logo.png';
 		?>
 		<meta property="og:image" content="<?php echo esc_url($og_image); ?>" />
 		<meta property="og:locale" content="ro_RO" />
@@ -32,7 +32,7 @@
 		<meta name="mrc__share_title" content="<?php echo $string; ?>">
 	<?php } else { ?>
 		<meta property="og:title" content="Yupi.md | tot ce'i mai bun pe net" />
-		<?php $og_image = 'https://www.yupi.md/wp-content/themes/yupi_theme/img/logo.png'; ?>
+		<?php $og_image = 'https://www.yupi.md/wp-content/themes/yupi_wp_new_2026/img/logo.png'; ?>
 		<meta property="og:image" content="<?php echo esc_url($og_image); ?>" />
 		<link rel="image_src" href="<?php echo esc_url($og_image); ?>" />
 		<meta name="mrc__share_title" content="Yupi.md | tot ce'i mai bun pe net">
