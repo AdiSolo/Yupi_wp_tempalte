@@ -1,0 +1,172 @@
+* {
+	margin:0px;
+	padding:0px;
+	}
+
+#header {
+	width:100%;
+	height:58px;
+	background:url(../img/header_bg.png) repeat-x;
+	margin:-5px 0 10px 0;
+	position:relative;
+}
+
+#logo {
+	margin-top:5px;
+	float:left;
+	display:block;
+	margin-left:400px;
+	}
+
+	.publ-top-box {
+	padding-bottom: 20px;
+	margin-bottom:30px;
+	margin-top: 50px;
+	border-bottom:solid 1px #eee;
+	}
+	
+.publ-info-left {
+float:left;
+width:550px;
+margin-top:5px;
+}
+
+.publ-info-left p{
+	color:#777;
+	font-family: Palatino Linotype;
+	font-size: 17px;
+	font-weight: 100;
+	text-align:justify;
+}
+
+.publ-info-right {
+	float:right;
+}
+
+.publ-info-right table tr td {
+text-align:left;
+}
+
+.publ-info-right table {
+	border-collapse:collapse;
+}
+
+table ,th,tr,td {
+border:none;
+}
+	
+
+.publ-images {
+	float:left;
+	margin-top:20px;
+	}
+	
+.publ-articole {
+float:left;
+margin-top:60px;
+}
+
+.publ-quick {
+	float:left;
+}
+
+.publ-quick a{
+	margin-top:-10px;
+	margin-left:20px;
+}
+
+
+.publ-articole h1, .publ-quick h1{
+	font-family: Palatino Linotype;
+	color: #cc0000;
+	font-size: 25px;
+	font-weight: 100;
+	margin-bottom:10px;
+	}
+
+.publ-articole p , .publ-quick p{
+width: 590px;
+color:#777;
+	font-family: Palatino Linotype;
+	font-size: 17px;
+	font-weight: 100;
+	text-align:justify;
+	float:left;
+}
+
+
+
+.publ-articole a{
+	margin:-30px 0 0 20px;
+}
+	
+.publ-contact {
+	float:left;
+	width:100%;
+	background:#515151;
+	margin-top:30px;
+	color:#e4e4e4;
+	padding:7px 0;
+	}
+
+.publ-contact h4 {
+	font-family: Palatino Linotype;
+	font-size: 17px;
+	padding-bottom:10px;
+	letter-spacing: 1px;
+}
+
+.publ-contact p {
+    font-family: Palatino Linotype;
+	font-size: 15px;
+	line-height:35px;
+	padding-left:40px;
+	background:url(../img/publ-phone.png) no-repeat;
+	letter-spacing: 1px;
+}
+	
+	
+	
+
+.publ-top-box h1{
+	font-family: Palatino Linotype;
+	color: #cc0000;
+	font-size: 25px;
+	font-weight: 100;
+	text-align: center;
+}
+
+.publ-top-box h3{
+	text-align: center;
+	font-family: Palatino Linotype;
+	font-size: 17px;
+	font-weight: 100;
+	padding-top: 10px;
+	}
+
+
+table .publ-b {
+font-weight:bold;
+
+}
+
+.banner-pret {
+	float:right;
+	width:350px;
+	font-size:15px;
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	
+}
+
+.banner-pret tr+td{
+font-weight:bold;
+}
+
+.banner-pret td{
+border-bottom:solid 1px #ddd;
+	height:40px;
+}
+
+.banner-pret em {
+	display: inline;
+}
