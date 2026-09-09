@@ -1,8 +1,8 @@
-<?php get_header();
+<?php
 /*
 	Template Name: Filme
-*/	
-	
+*/
+
 get_header();
 $pageNumber = (get_query_var('paged')) ? get_query_var('paged') : 1;
 $cat_id = 41;
