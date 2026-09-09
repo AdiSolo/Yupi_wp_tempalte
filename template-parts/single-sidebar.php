@@ -77,6 +77,10 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1398978669235-0');
 			<div style="padding: 20px 15px;">
 				<a href="https://akora.ro/collections/set-cutite-profesionale" target="blank">Set cutite profesionale</a>
 			</div>
+			<div style="padding: 20px 15px;">
+
+			<a href="https://autoco.ro/masini-coreene" target="blank">Import automobile din Coreea în Romania și UE</a>
+			</div>
 
 
 
