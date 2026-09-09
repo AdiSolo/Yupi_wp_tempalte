@@ -56,3 +56,60 @@ img {
     line-height: 23px;
   }
 }
+
+/* -----------------------------------------------------------------------------------------------
+   Step 2: header nav row + post images were overflowing past the right edge on narrow screens
+   (nav text cut off, big post image clipped). Fixing just that, still without touching the
+   float/width of .wrapp / #all_content / #content / #sidebar / .left_index_content themselves.
+   ----------------------------------------------------------------------------------------------- */
+@media screen and (max-width: 768px) {
+  .head_meteo,
+  .head_like,
+  .logo_cont,
+  #head_nav,
+  #head_search {
+    float: none;
+    width: auto;
+    margin: 10px auto;
+    text-align: center;
+  }
+
+  #logo {
+    float: none;
+    margin: 0 auto;
+  }
+
+  #head_nav li {
+    float: none;
+    display: inline-block;
+  }
+
+  #head_menu li {
+    float: none;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+  #head_menu li a {
+    float: none;
+    display: block;
+  }
+
+  li.head_menu_random {
+    display: none;
+  }
+
+  .post,
+  .post-big,
+  .post-small {
+    width: 100%;
+    float: none;
+    box-sizing: border-box;
+    margin-left: 0;
+  }
+
+  .post-small {
+    height: auto;
+  }
+}
