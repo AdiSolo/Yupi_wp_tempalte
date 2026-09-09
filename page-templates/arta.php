@@ -5,8 +5,12 @@
 
 get_header();
 $pageNumber = (get_query_var('paged')) ? get_query_var('paged') : 1;
-$cat_id = 43;
-$top_cat_id = 44;
+// No category matching "arta"/"dragoste" (love & relationships) exists on this site -
+// falling back to the site's general content pool (same pattern index.php itself uses
+// for the homepage) rather than an unrelated specific category. Confirm/replace if
+// there's a more appropriate category.
+$cat_id = 47; // "vise" - the site's general/largest content category
+$top_cat_id = 48; // "meniu" - the site's "featured" category, same pairing index.php uses
 ?>
 
 

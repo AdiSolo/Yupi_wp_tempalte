@@ -5,8 +5,8 @@
 
 get_header();
 $pageNumber = (get_query_var('paged')) ? get_query_var('paged') : 1;
-$cat_id = 45;
-$top_cat_id = 46;
+$cat_id = 40; // "fotografie" category - matches this template's "Fotografie & Video" page
+$top_cat_id = 49; // "post-format-video" category - the "Video" half of the same page
 ?>
 
 

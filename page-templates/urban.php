@@ -4,8 +4,8 @@ Template Name: Urban
 */
 get_header();
 $pageNumber = (get_query_var('paged')) ? get_query_var('paged') : 1;
-$cat_id = 37;
-$top_cat_id = 38;
+$cat_id = 29; // "urban" category - name matches this template/URL directly
+$top_cat_id = 30; // "top-urban" category - name matches this template's "top" slot directly
 ?>
 
 

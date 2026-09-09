@@ -5,8 +5,10 @@
 
 get_header();
 $pageNumber = (get_query_var('paged')) ? get_query_var('paged') : 1;
-$cat_id = 41;
-$top_cat_id = 42;
+// No category matching "filme" (movies) exists on this site - best available match,
+// not a confirmed mapping. Confirm/replace if there's a more appropriate category.
+$cat_id = 49; // "post-format-video" - closest available match to movie/film content
+$top_cat_id = 57; // "auto" - currently empty, so the "top" slot just stays empty rather than showing unrelated posts
 ?>
 
 

@@ -75,7 +75,7 @@
 			if (d.getElementById(id)) return;
 			js = d.createElement(s);
 			js.id = id;
-			js.src = "//connect.facebook.net/ro_RO/all.js#xfbml=1&appId=130517953706177";
+			js.src = "https://connect.facebook.net/ro_RO/sdk.js#xfbml=1&version=v21.0&appId=130517953706177";
 			fjs.parentNode.insertBefore(js, fjs);
 		}(document, 'script', 'facebook-jssdk'));
 

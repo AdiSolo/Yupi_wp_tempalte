@@ -5,8 +5,10 @@
 
 get_header();
 $pageNumber = (get_query_var('paged')) ? get_query_var('paged') : 1;
-$cat_id = 39;
-$top_cat_id = 40;
+// No category matching "lectura" (reading/personal development) exists on this site -
+// best available match, not a confirmed mapping. Confirm/replace if there's a better fit.
+$cat_id = 46; // "succes" - closest available match to personal-development content
+$top_cat_id = 57; // "auto" - currently empty, so the "top" slot just stays empty rather than showing unrelated posts
 ?>
 
 
