@@ -97,6 +97,12 @@
 				}, duration);
 				return false;
 			})
+
+			jQuery('#mobile_menu_toggle').on('click', function() {
+				var expanded = jQuery(this).attr('aria-expanded') === 'true';
+				jQuery(this).attr('aria-expanded', String(!expanded));
+				jQuery('#head_menu').toggleClass('is-open');
+			});
 		});
 	</script>
 
@@ -145,6 +151,11 @@
 						<input value="" id="searchImage" type="submit" name="search" class="search-button">
 					</form>
 				</div>
+
+				<button type="button" id="mobile_menu_toggle" aria-controls="head_menu" aria-expanded="false">
+					<span class="hamburger_icon"><span></span><span></span><span></span></span>
+					<span class="hamburger_label">Meniu</span>
+				</button>
 
 				<ul id="head_menu">
 					<li class="head_menu_yupi"><a href="https://yupi.md">Yupi</a> </li>

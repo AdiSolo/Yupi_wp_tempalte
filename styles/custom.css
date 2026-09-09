@@ -20,6 +20,10 @@ img {
   max-width: 100% !important;
 }
 
+#mobile_menu_toggle {
+  display: none;
+}
+
 @media screen and (max-width: 768px) {
   h1.title a {
     font-size: 19px;
@@ -49,41 +53,107 @@ img {
     box-sizing: border-box;
   }
 
+  .under_head_ad {
+    padding: 15px;
+  }
+
+  /* ---------- header ---------- */
   #header {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
+    padding: 15px 15px 0;
+    box-sizing: border-box;
   }
 
   .head_meteo,
-  .head_like,
-  .logo_cont,
-  #head_search {
+  .head_like {
     width: auto;
-    margin: 8px 0;
+    margin: 0 0 10px;
     text-align: center;
+  }
+
+  .head_like {
+    order: 2;
+  }
+
+  .logo_cont {
+    width: auto;
+    margin: 0 0 12px;
+    text-align: center;
+    order: 1;
   }
 
   #logo {
     margin: 0;
   }
 
+  #head_search {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 0 12px;
+    text-align: center;
+    order: 3;
+  }
+
+  #head_search input#sli_search_1 {
+    width: 62%;
+    box-sizing: border-box;
+  }
+
   #head_nav {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 8px 0;
+    width: 100%;
+    margin: 0 0 14px;
+    order: 4;
   }
 
   #head_nav li {
     padding-left: 0;
   }
 
-  #head_menu {
+  /* ---------- hamburger toggle ---------- */
+  #mobile_menu_toggle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0 0 15px;
+    padding: 9px 18px;
+    background: #e3170d;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    order: 5;
+  }
+
+  #mobile_menu_toggle .hamburger_icon {
     display: flex;
     flex-direction: column;
+    gap: 3px;
+  }
+
+  #mobile_menu_toggle .hamburger_icon span {
+    display: block;
+    width: 16px;
+    height: 2px;
+    background: #fff;
+  }
+
+  #head_menu {
+    display: none;
+    flex-direction: column;
     width: 100%;
+    order: 6;
+    border-top: solid 2px #e3170d;
+  }
+
+  #head_menu.is-open {
+    display: flex;
   }
 
   #head_menu li {
@@ -96,6 +166,12 @@ img {
     width: 100%;
     box-sizing: border-box;
     text-align: center;
+    padding: 12px 10px;
+  }
+
+  #head_menu .head_menu_yupi a {
+    background-position: center 10px;
+    padding-top: 34px;
   }
 
   #head_menu li span {
@@ -106,14 +182,14 @@ img {
     display: none;
   }
 
-  .left_index_content,
-  #sidebar,
-  .single-sidebar {
+  /* ---------- content ---------- */
+  .left_index_content {
     display: flex;
     flex-direction: column;
     float: none;
     width: 100%;
     box-sizing: border-box;
+    padding: 0 15px;
   }
 
   .post,
@@ -122,10 +198,84 @@ img {
     width: 100%;
     float: none;
     box-sizing: border-box;
-    margin-left: 0;
+    margin: 0 0 25px;
   }
 
   .post-small {
     height: auto;
+  }
+
+  .post-big .description,
+  .post-small .title {
+    padding: 0 2px;
+  }
+
+  /* ---------- sidebar ---------- */
+  #sidebar,
+  .single-sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    float: none;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 15px 20px;
+  }
+
+  /* ---------- footer ---------- */
+  #footer {
+    height: auto;
+    padding: 20px 15px;
+    box-sizing: border-box;
+  }
+
+  #footer,
+  .footer_left,
+  .abonare_footer,
+  .footer_right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    float: none;
+    width: 100%;
+    text-align: center;
+  }
+
+  #footer .footer_logo {
+    margin: 0 0 10px;
+  }
+
+  #footer p {
+    padding: 0;
+    margin: 0 0 15px;
+  }
+
+  .abonare_footer {
+    margin: 0 0 15px;
+  }
+
+  .footer_links {
+    text-align: center;
+  }
+
+  .footer_links li {
+    display: inline-block;
+    margin: 4px 8px;
+  }
+
+  .footer_right {
+    margin-top: 0;
+  }
+
+  .footer_social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer_social_fb,
+  .footer_social_twitter {
+    float: none;
+    margin: 8px 0 0;
   }
 }
