@@ -1,15 +1,5 @@
 @charset "utf-8";
 
-/* -----------------------------------------------------------------------------------------------
-   Responsive layer for Yupi Theme.
-   style.css is untouched — everything here is additive.
-
-   NOTE: a previous version of this file added layout-restructuring rules (floats/widths for
-   .wrapp, #content, .left_index_content, #sidebar, header nav) inside @media blocks that caused
-   the entire header/content area to render blank on narrow screens in production. Rolled back to
-   this safe subset while that's root-caused; only rules that cannot hide content are kept.
-   ----------------------------------------------------------------------------------------------- */
-
 html,
 body {
   overflow-x: hidden;
@@ -19,8 +9,6 @@ img {
   max-width: 100%;
 }
 
-/* Facebook widgets (like/comments) render fixed-width iframes via their own JS;
-   cap them so they can't force horizontal overflow on narrow screens. */
 .fb-like,
 .fb-comments,
 .fb_iframe_widget,
@@ -32,12 +20,6 @@ img {
   max-width: 100% !important;
 }
 
-/* -----------------------------------------------------------------------------------------------
-   Step 1 of the responsive re-introduction: typography/spacing only, nothing that changes float,
-   width, or display of .wrapp / #all_content / #header / #content — the structural containers
-   whose real box-model behavior isn't fully verifiable from static analysis alone. Verify this
-   step on a real phone before the next layer (header nav collapse, sidebar stacking) goes in.
-   ----------------------------------------------------------------------------------------------- */
 @media screen and (max-width: 768px) {
   h1.title a {
     font-size: 19px;
@@ -57,15 +39,16 @@ img {
   }
 }
 
-/* -----------------------------------------------------------------------------------------------
-   Step 2 (rebuilt with flexbox): header nav row + post images were overflowing past the right
-   edge on narrow screens. Flex containers force their children out of float entirely (the CSS
-   spec computes float/clear on a flex item to 'none' automatically), which is a much more
-   predictable way to get a vertical stack than overriding float/width/display one by one on
-   elements that were designed around floating. Still not touching .wrapp / #all_content /
-   #content / #sidebar / .left_index_content.
-   ----------------------------------------------------------------------------------------------- */
 @media screen and (max-width: 768px) {
+  .wrapp,
+  #all_content,
+  #content,
+  .under_head_ad {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
   #header {
     display: flex;
     flex-direction: column;
@@ -123,11 +106,14 @@ img {
     display: none;
   }
 
-  .left_index_content {
+  .left_index_content,
+  #sidebar,
+  .single-sidebar {
     display: flex;
     flex-direction: column;
     float: none;
     width: 100%;
+    box-sizing: border-box;
   }
 
   .post,
