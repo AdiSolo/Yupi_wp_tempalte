@@ -31,3 +31,28 @@ img {
 .fb_iframe_widget iframe {
   max-width: 100% !important;
 }
+
+/* -----------------------------------------------------------------------------------------------
+   Step 1 of the responsive re-introduction: typography/spacing only, nothing that changes float,
+   width, or display of .wrapp / #all_content / #header / #content — the structural containers
+   whose real box-model behavior isn't fully verifiable from static analysis alone. Verify this
+   step on a real phone before the next layer (header nav collapse, sidebar stacking) goes in.
+   ----------------------------------------------------------------------------------------------- */
+@media screen and (max-width: 768px) {
+  h1.title a {
+    font-size: 19px;
+    line-height: 26px;
+  }
+
+  .post .description p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  h1.title a {
+    font-size: 17px;
+    line-height: 23px;
+  }
+}
