@@ -9,8 +9,8 @@
 	<link rel="shortcut icon" href="https://www.yupi.md/favi.png">
 	<title> <?php wp_title(); ?></title>
 	<link rel="profile" href="https://gmpg.org/xfn/11" />
-	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('template_url'); ?>/style.css" />
-	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('template_url'); ?>/styles/custom.css" />
+	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('template_url'); ?>/style.css?ver=<?php echo filemtime(get_template_directory() . '/style.css'); ?>" />
+	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('template_url'); ?>/styles/custom.css?ver=<?php echo filemtime(get_template_directory() . '/styles/custom.css'); ?>" />
 	<link rel="image_src" href="<?php bloginfo('template_url'); ?>/img/logo.png" />
 
 	<!-- FB / Odno -->
