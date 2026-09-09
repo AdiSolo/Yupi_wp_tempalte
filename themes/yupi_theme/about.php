@@ -22,7 +22,7 @@ Mai revii? Te așteptăm!</p>
 <p style="text-align:center; margin-top:30px;">
 Cu multa prospețime,</br>
 Un alt fel de echipă, Yupi.md</p>
-<img src="http://yupi.md/wp-content/uploads/2015/01/2f3ecc545fd69d71324ecf8cffd82768076a6604725a1306c4e646b1498a984d.jpg" alt="Echipa" style="width:100%;height:100%">
+<img src="https://yupi.md/wp-content/uploads/2015/01/2f3ecc545fd69d71324ecf8cffd82768076a6604725a1306c4e646b1498a984d.jpg" alt="Echipa" style="width:100%;height:100%">
 </div>
 
 <?php get_sidebar(); ?>

@@ -52,10 +52,10 @@ if($count==1 || $count==5 || $count==13 || $count==18) {
 <div id="post-<?php the_ID(); ?>" class="post <?php echo $class; ?>" >
 	<a href="<?php the_permalink(); ?>">
 		<?php if($class == 'post-big') {
-		 the_post_thumbnail(array('size' => 300,200), array('title' => ''));
+		 the_post_thumbnail(array(300, 200), array('title' => ''));
 		} else  {
-			the_post_thumbnail(array('size' => 300,200), array('title' => ''));
-			
+			the_post_thumbnail(array(300, 200), array('title' => ''));
+
 		}
 		?>
 	</a>
@@ -77,7 +77,7 @@ wp_reset_postdata();
 
 if($pageNumber>1) { ?>
 		 
-		 <a href="http://yupi.md/page/<?php echo $pageNumber-1;?>" class="index_more_posts" style="float:left;"><< Înapoi</a>
+		 <a href="https://yupi.md/page/<?php echo $pageNumber-1;?>" class="index_more_posts" style="float:left;"><< Înapoi</a>
 		 
 		 <?php } 
 
@@ -87,7 +87,7 @@ if( empty( $myposts ) )
 } else if($count==16) {
 ?>
 		
-         <a href="http://yupi.md/page/<?php echo $pageNumber+1;?>" class="index_more_posts">Mai multe articole >></a>
+         <a href="https://yupi.md/page/<?php echo $pageNumber+1;?>" class="index_more_posts">Mai multe articole >></a>
 		 
 		 
 		 
@@ -95,10 +95,10 @@ if( empty( $myposts ) )
 <?php } ?>
 	  </div>
 	  
-<?php get_sidebar(); ?>  
-<?php get_footer(); ?>      
+<?php get_sidebar(); ?>
 </div>
 </div>
+<?php get_footer(); ?>
 
 <?php /*
 	if (is_user_logged_in() ) { ?>

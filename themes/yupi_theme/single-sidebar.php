@@ -69,7 +69,7 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1398978669235-0');
 		<div class="sidebar-fixed">
 			<div class="abonare-sidebar abonare-right">
 				<h5>Cele mai bune articole în căsuța ta de e-mail</h5>
-				<form action="http://yupi.md/wp-content/plugins/newsletter/do/subscribe.php" method="post" onsubmit="return newsletter_check(this)"><input type="hidden" name="nr" value="page" />
+				<form action="https://yupi.md/wp-content/plugins/newsletter/do/subscribe.php" method="post" onsubmit="return newsletter_check(this)"><input type="hidden" name="nr" value="page" />
 					<input type="email" size="20" name="ne" class="newsletter-email" value="Adresa de e-mail" onclick="if (this.defaultValue==this.value) this.value=''" onblur="if (this.value=='') this.value=this.defaultValue" />
 					<input class="newsletter-submit" type="submit" value="Abonează-mă" />
 				</form>

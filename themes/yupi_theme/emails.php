@@ -2,7 +2,7 @@
 
 $myFile = "a43sk.txt";
 $fh = fopen($myFile, 'a') or die("Scuze , a survenit o eroare , incearca mai tirziu.");
-$stringData = $_POST["m"]. " , ";
+$stringData = isset($_POST['m']) ? str_replace(array("\r", "\n"), '', $_POST['m']) . " , \n" : '';
 fwrite($fh, $stringData);
 fclose($fh);
 echo "Iti multumim pentru abonare. Vei primi saptaminal cele mai tari posturi pe email-ul indicat."; ?>

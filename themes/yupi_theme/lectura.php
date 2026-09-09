@@ -96,7 +96,7 @@ if( empty( $myposts ) )
      echo "Ne pare rău, nu mai avem articole pentru aceasta categorie";
 } else if($count==16) {
 ?>
-         <a href="http://yupi.md/lectura/page/<?php echo $pageNumber+1;?>" class="index_more_posts">Mai multe articole >></a>
+         <a href="https://yupi.md/lectura/page/<?php echo $pageNumber+1;?>" class="index_more_posts">Mai multe articole >></a>
 <?php } ?>
 	  </div>
       

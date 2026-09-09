@@ -54,7 +54,7 @@
 				if (class_exists('kdMultipleFeaturedImages')) {
 					kd_mfi_the_featured_image('featured-image-2', 'post', 'intro-image');
 				}
-				echo get_the_post_thumbnail($post_id, 'full');
+				echo get_the_post_thumbnail(get_the_ID(), 'full');
 
 				?>
 			</div>
@@ -121,7 +121,7 @@
 							<h4>Abonează-te!</h4>
 							<p>Lasă-ne adresa ta de e-mail, iar noi vom avea grijă să primești cele mai bune articole de pe Yupi.md</p>
 							<div class="abonare-sidebar">
-								<form action="http://yupi.md/wp-content/plugins/newsletter/do/subscribe.php" method="post" onsubmit="return newsletter_check(this)"><input type="hidden" name="nr" value="page" />
+								<form action="https://yupi.md/wp-content/plugins/newsletter/do/subscribe.php" method="post" onsubmit="return newsletter_check(this)"><input type="hidden" name="nr" value="page" />
 									<input type="email" size="21" name="ne" class="newsletter-input" value="Adresa de e-mail" onclick="if (this.defaultValue==this.value) this.value=''" onblur="if (this.value=='') this.value=this.defaultValue" />
 									<input class="newsletter-submit" type="submit" value="Abonează-mă" />
 								</form>
@@ -143,7 +143,7 @@
 							<li class="related-large">
 								<a href="<?php the_permalink() ?>">
 									<div class="img_box">
-										<?php the_post_thumbnail(array('size' => 300, 200), array('title' => '')); ?>
+										<?php the_post_thumbnail(array(300, 200), array('title' => '')); ?>
 									</div>
 									<h3><?php the_title(); ?></h3>
 								</a>
@@ -203,7 +203,7 @@
 
 
 
-				<a href="http://www.yupi.md">
+				<a href="https://www.yupi.md">
 					<!-- <div id="yupi"></div> -->
 				</a>
 			<?php endwhile; ?>

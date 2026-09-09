@@ -16,7 +16,7 @@ Template Name: Search
     var customSearchControl = new google.search.CustomSearchControl('011348303528365521459:opwj9prepp0');
     customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
     customSearchControl.draw('cse');
-	jQuery(".gsc-input").val("<?php echo $_GET['q']; ?>");//insert into search field requested search text
+	jQuery(".gsc-input").val("<?php echo isset($_GET['q']) ? esc_js($_GET['q']) : ''; ?>");//insert into search field requested search text
     jQuery(".gsc-search-button").click();//call button click event, show results
   }, true);
 </script>

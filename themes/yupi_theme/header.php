@@ -3,12 +3,14 @@
 
 <head>
 	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<meta property="fb:admins" content="100001140491605" />
 	<meta name="google-site-verification" content="6tF6Yx08jr4DJ-C6T8wggiACx3sTZQbw90bKk__qOO4" />
 	<link rel="shortcut icon" href="https://www.yupi.md/favi.png">
 	<title> <?php wp_title(); ?></title>
 	<link rel="profile" href="https://gmpg.org/xfn/11" />
 	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('template_url'); ?>/style.css" />
+	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('template_url'); ?>/custom.css" />
 	<link rel="image_src" href="<?php bloginfo('template_url'); ?>/img/logo.png" />
 
 	<!-- FB / Odno -->
@@ -17,19 +19,22 @@
 	<?php if (is_single()) { ?>
 		<meta property="og:title" content="<?php the_title(); ?>" />
 		<meta property="og:type" content="article" />
-		<?php $src = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), array(200, 200), false, ''); ?>
-		<meta property="og:image" content="<?php echo $src[0]; ?>" />
-		<meta property="og:locale" content="ro_RO" />
-		<link rel="image_src" href="<?php echo $src[0]; ?>" />
 		<?php
-		$string = get_the_title($ID);
+		$src = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), array(200, 200), false, '');
+		$og_image = $src ? $src[0] : 'https://www.yupi.md/wp-content/themes/yupi_theme/img/logo.png';
+		?>
+		<meta property="og:image" content="<?php echo esc_url($og_image); ?>" />
+		<meta property="og:locale" content="ro_RO" />
+		<link rel="image_src" href="<?php echo esc_url($og_image); ?>" />
+		<?php
+		$string = get_the_title($post->ID);
 		$string = preg_replace('/\S*[^a-z0-9A-Z\s,\.]+\S*/', '', $string); ?>
 		<meta name="mrc__share_title" content="<?php echo $string; ?>">
 	<?php } else { ?>
 		<meta property="og:title" content="Yupi.md | tot ce'i mai bun pe net" />
-		<?php $src = "https:/www.yupi.md/wp-content/themes/Yupi_2/img/logo.png" ?>
-		<meta property="og:image" content="<?php echo $src[0]; ?>" />
-		<link rel="image_src" href="<?php echo $src[0]; ?>" />
+		<?php $og_image = 'https://www.yupi.md/wp-content/themes/yupi_theme/img/logo.png'; ?>
+		<meta property="og:image" content="<?php echo esc_url($og_image); ?>" />
+		<link rel="image_src" href="<?php echo esc_url($og_image); ?>" />
 		<meta name="mrc__share_title" content="Yupi.md | tot ce'i mai bun pe net">
 	<?php } ?>
 
@@ -133,7 +138,7 @@
 
 				<div id="head_search">
 					<form action="https://www.yupi.md/cautare" role="search" method="get" id="searchform" class="search_form">
-						<input size="30" title="Caută " name="q" id="sli_search_1" autocomplete="off" class="defaultText ac_input defaultTextActive" type="text" id="search-input">
+						<input size="30" title="Caută " name="q" id="sli_search_1" autocomplete="off" class="defaultText ac_input defaultTextActive" type="text">
 						<script>
 							jQuery("#sli_search_1").val("Caută");
 						</script>

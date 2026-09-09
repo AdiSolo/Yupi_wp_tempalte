@@ -38,4 +38,4 @@ foreach( $myposts as $post ) :	setup_postdata($post); ?>
 </div>
 <?php endforeach; ?>
 </div>
-<a href='http://yupi.md/page/<?php echo $pageNumber+1 ?>' class='older'>Mai multe articole</a>
+<a href='https://yupi.md/page/<?php echo $pageNumber+1 ?>' class='older'>Mai multe articole</a>

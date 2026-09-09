@@ -3,7 +3,7 @@
 
 <?php while($recent->have_posts()) : $recent->the_post();?>
 <h1 class="title"><a href="<?php the_permalink(); ?>"  rel="bookmark">Imaginea zilei</a> </h1>
-<span class="image-gallery"><a href="http://yupi.md/category/image-of-day/">Vezi galeria</a></span>
+<span class="image-gallery"><a href="https://yupi.md/category/image-of-day/">Vezi galeria</a></span>
 <?php the_content(); ?>
 <div class="imaginea-zilei-info">
 <div id="fb-root"></div>

@@ -1,0 +1,224 @@
+@charset "utf-8";
+
+/* -----------------------------------------------------------------------------------------------
+   Responsive layer for Yupi Theme.
+   style.css is untouched — everything here is additive and only takes effect at the breakpoints
+   below, so the existing desktop design (>1050px) renders exactly as before.
+   ----------------------------------------------------------------------------------------------- */
+
+img {
+  max-width: 100%;
+}
+
+/* -----------------------------------------------------------------------------------------------
+   Tablet: ≤1050px — the fixed 1050px layout becomes fluid, sidebar stays alongside content
+   ----------------------------------------------------------------------------------------------- */
+@media screen and (max-width: 1050px) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
+  .wrapp,
+  #content,
+  .under_head_ad {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .left_index_content {
+    width: 68%;
+    box-sizing: border-box;
+  }
+
+  #sidebar,
+  .single-sidebar {
+    width: 28%;
+    box-sizing: border-box;
+  }
+
+  .post-big {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .post-small {
+    width: 47%;
+    height: auto;
+    min-height: 280px;
+    box-sizing: border-box;
+  }
+
+  #logo {
+    margin-left: 20px;
+  }
+
+  #head_nav {
+    margin-right: 10px;
+  }
+
+  #head_search {
+    width: 220px;
+  }
+}
+
+/* -----------------------------------------------------------------------------------------------
+   Mobile: ≤768px — content and sidebar stack, header collapses to a single column
+   ----------------------------------------------------------------------------------------------- */
+@media screen and (max-width: 768px) {
+  .left_index_content,
+  #sidebar,
+  .single-sidebar,
+  .sidebar-fixed,
+  .sidebar-shadow {
+    width: 100%;
+    float: none;
+    box-sizing: border-box;
+    margin-left: 0;
+  }
+
+  #sidebar {
+    padding-right: 0;
+  }
+
+  .post-small {
+    width: 100%;
+  }
+
+  #header {
+    padding-bottom: 10px;
+  }
+
+  .head_meteo,
+  .head_like,
+  .logo_cont,
+  #head_nav,
+  #head_search,
+  #head_menu li {
+    float: none;
+    width: auto;
+    margin: 0;
+  }
+
+  .logo_cont {
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  #logo {
+    margin: 0 auto;
+    float: none;
+  }
+
+  .head_meteo,
+  .head_like {
+    text-align: center;
+    margin: 5px auto;
+  }
+
+  #head_nav {
+    text-align: center;
+    padding: 5px 0;
+  }
+
+  #head_nav li {
+    float: none;
+    display: inline-block;
+  }
+
+  #head_search {
+    margin: 10px auto;
+    padding: 0 15px;
+    box-sizing: border-box;
+  }
+
+  #head_search input#sli_search_1 {
+    width: 65%;
+    box-sizing: border-box;
+  }
+
+  #head_menu {
+    background: #f7f7f7;
+  }
+
+  #head_menu li {
+    width: 100%;
+    text-align: center;
+    border-bottom: solid 1px #eaeaea;
+  }
+
+  #head_menu li a {
+    float: none;
+    padding: 10px 0;
+  }
+
+  li.head_menu_random {
+    display: none;
+  }
+
+  .under_head_ad {
+    padding: 15px;
+  }
+
+  #footer,
+  .footer_left,
+  .abonare_footer,
+  .footer_right {
+    width: 100%;
+    float: none;
+    text-align: center;
+    height: auto;
+    box-sizing: border-box;
+  }
+
+  #footer .footer_logo {
+    float: none;
+    margin: 0 auto;
+    display: table;
+  }
+
+  #footer p {
+    float: none;
+    padding: 10px 0;
+  }
+
+  .footer_social {
+    display: inline-block;
+  }
+
+  .footer_social_fb,
+  .footer_social_twitter {
+    display: inline-block;
+    float: none;
+    text-align: left;
+  }
+}
+
+/* -----------------------------------------------------------------------------------------------
+   Small mobile: ≤480px
+   ----------------------------------------------------------------------------------------------- */
+@media screen and (max-width: 480px) {
+  #logo,
+  #logo img {
+    width: 80px;
+    height: 80px;
+  }
+
+  #logo {
+    margin-top: 0;
+  }
+
+  h1.title a {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .post {
+    margin-left: 10px;
+  }
+
+  #head_search input#sli_search_1 {
+    width: 55%;
+  }
+}

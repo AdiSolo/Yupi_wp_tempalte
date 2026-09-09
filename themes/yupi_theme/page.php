@@ -1,5 +1,4 @@
 <?php get_header(); ?>
-<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('template_url'); ?>/custom.css" />
 
 <div id="content">
 <div class="left_index_content">
@@ -11,6 +10,6 @@
 			<?php endwhile; ?>
 		</div>		
 		<?php get_sidebar(); ?>
-		<?php get_footer(); ?>
 </div>
 </div>
+<?php get_footer(); ?>
