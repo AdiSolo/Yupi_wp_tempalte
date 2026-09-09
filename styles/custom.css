@@ -305,6 +305,37 @@ img {
     box-sizing: border-box;
   }
 
+  .next-pre-posts li a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .next-pre-posts li:first-of-type a {
+    flex-direction: row-reverse;
+  }
+
+  .next-pre-posts li span {
+    float: none;
+    flex: 0 0 30px;
+  }
+
+  .next-pre-posts li:first-of-type span {
+    float: none;
+  }
+
+  .next-pre-posts li div {
+    float: none;
+    width: auto;
+    flex: 1 1 auto;
+    min-height: 0;
+  }
+
+  .next-pre-posts li:first-of-type div {
+    float: none;
+    text-align: right;
+  }
+
   .next-pre-posts li:first-of-type {
     border-right: none;
     border-bottom: solid 1px #ddd;
@@ -343,6 +374,16 @@ img {
     margin-top: 0 !important;
     box-sizing: border-box;
     padding: 0 15px 20px;
+  }
+
+  /* single-sidebar.php hardcodes height:400px inline for its "most viewed" widget,
+     sized for many list items - with only a few (or one) it leaves a large empty gap. */
+  #sidebar .contentHolder {
+    width: 100%;
+    max-width: 325px;
+    height: auto;
+    max-height: 400px;
+    margin: 0 auto;
   }
 
   /* ---------- footer ---------- */
