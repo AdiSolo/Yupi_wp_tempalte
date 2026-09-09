@@ -210,7 +210,7 @@
 			</div>
 	</div>
 
-	<?php locate_template(array('template-parts/single-sidebar.php'), true) ?>
+	<?php get_sidebar(); ?>
 </div>
 
 <style>
