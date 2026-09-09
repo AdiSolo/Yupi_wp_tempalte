@@ -27,8 +27,8 @@
             
            
         
-			<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-<a href="<?php the_permalink(); ?>" class="post-thumbnail"> <?php yupi_post_thumbnail(array(300, 300), array('title' => '')); ?></a>
+			<div id="post-<?php the_ID(); ?>" class="post post-small">
+<a href="<?php the_permalink(); ?>" class="post-thumbnail"> <?php yupi_post_thumbnail(array(300, 200), array('title' => '')); ?></a>
 <h1 class="title"><a href="<?php the_permalink(); ?>"  rel="bookmark"><?php the_title(); ?></a> </h1>
 <div class="post_meta">
 
