@@ -295,33 +295,60 @@ img {
 
   .next-pre-posts {
     width: 100%;
+    margin: 30px 0;
+    box-sizing: border-box;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    background: #eee;
+  }
+
+  /* no adjacent post: the placeholder link goes nowhere useful (javascript:;) - hide it
+     entirely rather than show an empty row with a label and no title */
+  .next-pre-posts li.no_previous,
+  .next-pre-posts li.no_next {
+    display: none;
+  }
+
+  .next-pre-posts li {
+    width: 100%;
+    float: none;
+    background: #fff;
     box-sizing: border-box;
   }
 
-  .next-pre-posts li,
-  .next-pre-posts li a {
-    width: 100%;
-    float: none;
-    box-sizing: border-box;
+  .next-pre-posts li:first-of-type {
+    border-right: none;
+    border-bottom: none;
   }
 
   .next-pre-posts li a {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 15px;
+    width: 100%;
+    padding: 18px 16px;
+    box-sizing: border-box;
   }
 
-  .next-pre-posts li:first-of-type a {
-    flex-direction: row-reverse;
+  /* Not flex-direction: row-reverse - that combined with a background-image on a flex
+     item renders with the image clipped/cut off in this browser. Using `order` on the
+     children swaps the visual position just as well without triggering it. Default DOM
+     order is span-then-div, which already matches the "previous" item (icon on the left,
+     text on the right); only the "next" item needs the swap. */
+  .next-pre-posts li:not(:first-of-type) span {
+    order: 2;
+  }
+
+  .next-pre-posts li:not(:first-of-type) div {
+    order: 1;
   }
 
   .next-pre-posts li span {
     float: none;
     flex: 0 0 30px;
-  }
-
-  .next-pre-posts li:first-of-type span {
-    float: none;
+    margin-top: 0;
   }
 
   .next-pre-posts li div {
@@ -331,14 +358,21 @@ img {
     min-height: 0;
   }
 
-  .next-pre-posts li:first-of-type div {
-    float: none;
-    text-align: right;
+  .next-pre-posts li p {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 3px;
   }
 
-  .next-pre-posts li:first-of-type {
-    border-right: none;
-    border-bottom: solid 1px #ddd;
+  .next-pre-posts li h4 {
+    padding: 0;
+    font-size: 15px;
+    line-height: 21px;
+  }
+
+  .next-pre-posts li div {
+    text-align: left;
   }
 
   .recommend-posts {
