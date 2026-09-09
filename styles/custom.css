@@ -20,6 +20,18 @@ img {
   max-width: 100% !important;
 }
 
+/* This theme predates the block editor: the global reset zeroes all heading margins, and
+   .post_content h2 (style.css) never adds any margin back the way .post_content h3 does.
+   Block-authored content inserts <hr class="wp-block-separator"> right before section
+   headings, so with no spacing the rule and the heading render flush against each other. */
+.post_content h2 {
+  margin: 35px 0 15px;
+}
+
+.post_content .wp-block-separator {
+  margin: 30px 0;
+}
+
 #mobile_menu_toggle {
   display: none;
 }
