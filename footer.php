@@ -69,7 +69,7 @@
 		});
 	});
 </script>
-<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/script/scripts.js"></script>
+<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/scripts.js"></script>
 <a href="#top" class="to_top"></a>
 </body>
 

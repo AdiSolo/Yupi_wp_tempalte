@@ -1,5 +1,3 @@
-<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/script/jquery.smooth-scroll.min.js"></script>
-<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/lightbox.css" type="text/css" media="screen" />
 <script>
 $(document).ready(function(){
 $(".close-source").click(function () {

@@ -3,7 +3,7 @@
 Template Name: Search
 */
 ?>
-<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('template_url'); ?>/css/search-results.css" />
+<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('template_url'); ?>/styles/search-results.css" />
 <div id="content" class="search_page">
 <div class="left_index_content">
  <h2 id="search-result">Rezultatele căutării</h2>

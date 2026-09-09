@@ -6,19 +6,32 @@
    below, so the existing desktop design (>1050px) renders exactly as before.
    ----------------------------------------------------------------------------------------------- */
 
+html,
+body {
+  overflow-x: hidden;
+}
+
 img {
   max-width: 100%;
+}
+
+/* Facebook widgets (like/comments) render fixed-width iframes via their own JS;
+   cap them so they can't force horizontal overflow on narrow screens. */
+.fb-like,
+.fb-comments,
+.fb_iframe_widget,
+.fb_iframe_widget span {
+  max-width: 100%;
+}
+
+.fb_iframe_widget iframe {
+  max-width: 100% !important;
 }
 
 /* -----------------------------------------------------------------------------------------------
    Tablet: ≤1050px — the fixed 1050px layout becomes fluid, sidebar stays alongside content
    ----------------------------------------------------------------------------------------------- */
 @media screen and (max-width: 1050px) {
-  html,
-  body {
-    overflow-x: hidden;
-  }
-
   .wrapp,
   #content,
   .under_head_ad {
@@ -27,7 +40,8 @@ img {
     box-sizing: border-box;
   }
 
-  .left_index_content {
+  .left_index_content,
+  .write-for-us .left_index_content {
     width: 68%;
     box-sizing: border-box;
   }
@@ -35,6 +49,11 @@ img {
   #sidebar,
   .single-sidebar {
     width: 28%;
+    box-sizing: border-box;
+  }
+
+  #horoscope-index-ul {
+    width: 100%;
     box-sizing: border-box;
   }
 
@@ -68,6 +87,7 @@ img {
    ----------------------------------------------------------------------------------------------- */
 @media screen and (max-width: 768px) {
   .left_index_content,
+  .write-for-us .left_index_content,
   #sidebar,
   .single-sidebar,
   .sidebar-fixed,
@@ -80,6 +100,19 @@ img {
 
   #sidebar {
     padding-right: 0;
+  }
+
+  #sidebar .contentHolder {
+    width: 100%;
+    max-width: 325px;
+    margin: 0 auto;
+  }
+
+  .horoscope,
+  .social_side_home {
+    margin-left: auto;
+    margin-right: auto;
+    float: none;
   }
 
   .post-small {
@@ -159,6 +192,47 @@ img {
 
   .under_head_ad {
     padding: 15px;
+  }
+
+  .next-pre-posts li a {
+    width: 100%;
+    box-sizing: border-box;
+    float: none;
+  }
+
+  .next-pre-posts li {
+    width: 100%;
+    float: none;
+  }
+
+  .next-pre-posts li:first-of-type {
+    border-right: none;
+    border-bottom: solid 1px #ddd;
+  }
+
+  .recommend-posts {
+    padding-left: 0;
+  }
+
+  .recommend-posts li {
+    width: 47%;
+    margin: 10px 1.5% 20px 1.5%;
+  }
+
+  .recommend-posts li a .img_box {
+    width: 100%;
+  }
+
+  #horoscope-index-ul {
+    text-align: center;
+    padding-left: 0;
+  }
+
+  #horoscope-index-ul li,
+  .other-horoscope {
+    float: none;
+    display: inline-block;
+    margin-left: 10px;
   }
 
   #footer,

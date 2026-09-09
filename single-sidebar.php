@@ -1,5 +1,5 @@
-<script src="<?php bloginfo('template_url'); ?>/script/jquery.mousewheel.js"></script>
-<script src="<?php bloginfo('template_url'); ?>/script/perfect-scrollbar.js"></script>
+<script src="<?php bloginfo('template_url'); ?>/js/jquery.mousewheel.js"></script>
+<script src="<?php bloginfo('template_url'); ?>/js/perfect-scrollbar.js"></script>
 <?php
 global $post;
 $post_id = $post->ID;

@@ -10,7 +10,7 @@
 	<title> <?php wp_title(); ?></title>
 	<link rel="profile" href="https://gmpg.org/xfn/11" />
 	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('template_url'); ?>/style.css" />
-	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('template_url'); ?>/custom.css" />
+	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('template_url'); ?>/styles/custom.css" />
 	<link rel="image_src" href="<?php bloginfo('template_url'); ?>/img/logo.png" />
 
 	<!-- FB / Odno -->
@@ -21,7 +21,7 @@
 		<meta property="og:type" content="article" />
 		<?php
 		$src = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), array(200, 200), false, '');
-		$og_image = $src ? $src[0] : 'https://www.yupi.md/wp-content/themes/yupi_wp_new_2026/img/logo.png';
+		$og_image = $src ? $src[0] : get_template_directory_uri() . '/img/logo.png';
 		?>
 		<meta property="og:image" content="<?php echo esc_url($og_image); ?>" />
 		<meta property="og:locale" content="ro_RO" />
@@ -32,7 +32,7 @@
 		<meta name="mrc__share_title" content="<?php echo $string; ?>">
 	<?php } else { ?>
 		<meta property="og:title" content="Yupi.md | tot ce'i mai bun pe net" />
-		<?php $og_image = 'https://www.yupi.md/wp-content/themes/yupi_wp_new_2026/img/logo.png'; ?>
+		<?php $og_image = get_template_directory_uri() . '/img/logo.png'; ?>
 		<meta property="og:image" content="<?php echo esc_url($og_image); ?>" />
 		<link rel="image_src" href="<?php echo esc_url($og_image); ?>" />
 		<meta name="mrc__share_title" content="Yupi.md | tot ce'i mai bun pe net">
@@ -41,7 +41,7 @@
 	<!-- END FB / Odno -->
 
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
-	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/script/scripts.js"></script>
+	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/scripts.js"></script>
 
 
 
